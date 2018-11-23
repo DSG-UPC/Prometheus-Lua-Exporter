@@ -15,3 +15,12 @@ lapis server
 ```
 
 The API calls are secured with a secret token to avoid unauthorized access.
+
+
+## Deploying on Docker container
+There is another option that is to run it as a docker container taking advantage of the Dockerfile. Once you have Docker installed on your computer, run the following.
+
+```
+docker build -t <whatever-name-you-want> .
+docker run -d -it --network="host" <whatever-name-you-wrote>
+```
