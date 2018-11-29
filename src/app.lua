@@ -36,7 +36,7 @@ end
 app:get("/metrics", function(self)
   local auth = self.req.headers["authorization"]
   if(auth ~= bearer) then
-    return "Fuck you"
+    return "Unauthorized"
   else
     return {layout = false, content_type = "text/plain", format(scrape())}
   end
