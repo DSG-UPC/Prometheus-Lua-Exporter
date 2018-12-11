@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 
 COPY scripts/scraper.sh /usr/bin/scraper.sh
-COPY scripts/lua-server.service /etc/systemd/system/lua-server.service
 
 USER root
 
@@ -23,3 +22,6 @@ RUN wget -qO - https://openresty.org/package/pubkey.gpg | apt-key add - && \
 RUN luarocks install luasec && luarocks install lapis
 
 RUN git clone https://github.com/DSG-UPC/Prometheus-Lua-Exporter.git
+
+ENTRYPOINT "/usr/bin/scraper.sh"
+
