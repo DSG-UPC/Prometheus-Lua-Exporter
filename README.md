@@ -22,5 +22,5 @@ There is another option that is to run it as a docker container taking advantage
 
 ```
 docker build -t <whatever-name-you-want> .
-docker run -d -it --network="host" <whatever-name-you-wrote>
+docker run -d -it --network="host" -e OWNER_ADDRESS=[your_address]  <whatever-name-you-wrote>
 ```

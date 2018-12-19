@@ -43,4 +43,11 @@ app:get("/metrics", function(self)
   
 end)
 
+app:get("/owner", function(self)
+  local f = io.open("static/owner","r")
+  local owner = f:read("*a")
+  f:close()
+  return {layout = false, content_type = "text/plain", owner}		 
+end)
+
 return app
