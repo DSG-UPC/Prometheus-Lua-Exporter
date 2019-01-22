@@ -3,6 +3,7 @@ local app = lapis.Application()
 local eth0 = "eth0"
 local wlp3s0 = "wlp3s0"
 local ens18 = "ens18"
+local docker0 = "docker0"
 local bearer = "Bearer /RqFf-iW{<iaQ&5uAZmV~(QhZ§@5#gtitEyJq|5SN${2et|R&>d.VelFa}q,MxCz"
 local pattern = "([^%s:]+):%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)"
 
@@ -15,7 +16,7 @@ function scrape()
   for line in io.lines("/proc/net/dev") do
     local t = {string.match(line, pattern)}
     if(t[1] ~= nil) then
-      if trim(t[1]) == ens18 then
+      if trim(t[1]) == docker0 then
         nds_table["in"] = t[2]
         nds_table["out"] = t[10]
         nds_table["total"] = t[2] + t[10]
