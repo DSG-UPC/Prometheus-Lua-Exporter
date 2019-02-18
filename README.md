@@ -4,9 +4,11 @@ Prometheus Dockerfile to start a standalone server. Once running, this server wi
 ## Deploying on Docker container
 There is another option that is to run it as a docker container taking advantage of the Dockerfile. Once you have Docker installed on your computer, run the following.
 
+For compatibility with the Oracle of the [MeshWifiDapp](https://github.com/DSG-UPC/MeshWifiDapp) project, the address of the Ethereum wallet of the owner of the device should be provided upon booting the container.
+
 ```
 docker build -t <whatever-name-you-want> .
-docker run -d -it --network="host"  <whatever-name-you-wrote>
+docker run -d -it --network="host" -e OWNER_ADDRESS=[your_address]  <whatever-name-you-wrote>
 ```
 
 ## Running locally configuration to run
