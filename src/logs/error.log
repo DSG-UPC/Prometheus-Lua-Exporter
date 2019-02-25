@@ -1,0 +1,2 @@
+2019/01/22 15:00:12 [alert] 21178#21178: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/01/22 15:00:30 [alert] 21196#21196: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
