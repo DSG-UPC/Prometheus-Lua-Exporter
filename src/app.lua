@@ -6,6 +6,7 @@ local ens18 = "ens18"
 local docker0 = "docker0"
 local bearer = "Bearer /RqFf-iW{<iaQ&5uAZmV~(QhZ§@5#gtitEyJq|5SN${2et|R&>d.VelFa}q,MxCz"
 local pattern = "([^%s:]+):%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)"
+local total_fwd = 0
 
 function trim(s)
   return (s:gsub("^%s*(.-)%s*$", "%1"))
@@ -29,14 +30,13 @@ end
 function format(t)
   local result = "# HELP target_forwarded_bytes Total number of bytes forwarded (in/out/total)." .. "\n"
   result = result .. "# TYPE target_forwarded_bytes counter" .. "\n"
-  result = result .. "target_forwarded_bytes{state=\"in\"} " .. t["in"] .. "\n"
-  result = result .. "target_forwarded_bytes{state=\"out\"} " .. t["out"] .. "\n"
-  result = result .. "target_forwarded_bytes{state=\"total\"} " .. t["total"] .. "\n"
+  result = result .. "target_forwarded_bytes{state=\"total\"} " .. total_fwd .. "\n"
   return result
 end
 
 app:get("/metrics", function(self)
   local auth = self.req.headers["authorization"]
+  total += 150 
   if(auth ~= bearer) then
     return "Unauthorized"
   else
