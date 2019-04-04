@@ -28,20 +28,21 @@ function scrape()
   return nds_table
 end
 
-function format(total)
+function format(t)
   local result = "# HELP target_forwarded_bytes Total number of bytes forwarded (in/out/total)." .. "\n"
   result = result .. "# TYPE target_forwarded_bytes counter" .. "\n"
-  result = result .. "target_forwarded_bytes{state=\"total\"} " .. total .. "\n"
+  result = result .. "target_forwarded_bytes{state=\"in\"} " .. t["in"] .. "\n"
+  result = result .. "target_forwarded_bytes{state=\"out\"} " .. t["out"] .. "\n"
+  result = result .. "target_forwarded_bytes{state=\"total\"} " .. t["total"] .. "\n"
   return result
 end
 
 app:get("/metrics", function(self)
   local auth = self.req.headers["authorization"]
-  total_fwd = total_fwd + 150 
   if(auth ~= bearer) then
     return "Unauthorized"
   else
-    return {layout = false, content_type = "text/plain", format(total_fwd)}
+    return {layout = false, content_type = "text/plain", format(scrape())}
   end
   
 end)
