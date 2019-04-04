@@ -1,5 +1,5 @@
 local config = require("lapis.config")
 
 config("development", {
-  port = 9001
+  port = 9000
 })

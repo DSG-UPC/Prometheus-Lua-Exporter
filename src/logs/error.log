@@ -1,2 +1,8 @@
 2019/01/22 15:00:12 [alert] 21178#21178: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
 2019/01/22 15:00:30 [alert] 21196#21196: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:14:17 [alert] 23639#23639: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:15:34 [alert] 23989#23989: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:16:03 [alert] 24092#24092: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:19:15 [alert] 24421#24421: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:21:16 [alert] 24669#24669: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/03/21 16:23:25 [alert] 24821#24821: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
