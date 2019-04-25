@@ -24,7 +24,7 @@ RUN wget -qO - https://openresty.org/package/pubkey.gpg | apt-key add - && \
 
 RUN luarocks install luasec && luarocks install lapis
 
-RUN git clone -b net-eth0 https://github.com/DSG-UPC/Prometheus-Lua-Exporter.git
+RUN git clone https://github.com/DSG-UPC/Prometheus-Lua-Exporter.git
 
 ENTRYPOINT "/usr/bin/scraper.sh"
 

@@ -8,7 +8,7 @@ For compatibility with the Oracle of the [MeshWifiDapp](https://github.com/DSG-U
 
 ```
 docker build -t <whatever-name-you-want> .
-docker run -d -it --network="host" -e OWNER_ADDRESS=[your_address]  <whatever-name-you-wrote>
+docker run -d -it --network="host" -e OWNER_ADDRESS=[your_address] -e NET_INTERFACE=[interface_to_be_monitored]  <whatever-name-you-wrote>
 ```
 
 ## Running locally configuration to run
