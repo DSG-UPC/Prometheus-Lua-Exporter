@@ -2,6 +2,8 @@ FROM ubuntu:16.04
 
 COPY scripts/scraper.sh /usr/bin/scraper.sh
 
+ENV NET_INTERFACE=eth0
+
 USER root
 
 RUN apt-get update && apt-get upgrade -y \

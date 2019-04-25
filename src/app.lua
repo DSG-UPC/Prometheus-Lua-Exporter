@@ -5,6 +5,7 @@ local wlp3s0 = "wlp3s0"
 local ens18 = "ens18"
 local docker0 = "docker0"
 local enp1s0 = "enp1s0"
+local network = os.getenv("NET_INTERFACE")
 local bearer = "Bearer /RqFf-iW{<iaQ&5uAZmV~(QhZ§@5#gtitEyJq|5SN${2et|R&>d.VelFa}q,MxCz"
 local pattern = "([^%s:]+):%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)%s+(%d+)"
 total_fwd = 0
@@ -18,7 +19,7 @@ function scrape()
   for line in io.lines("/proc/net/dev") do
     local t = {string.match(line, pattern)}
     if(t[1] ~= nil) then
-      if trim(t[1]) == eth0 then
+      if trim(t[1]) == network then
         nds_table["in"] = t[2]
         nds_table["out"] = t[10]
         nds_table["total"] = t[2] + t[10]
