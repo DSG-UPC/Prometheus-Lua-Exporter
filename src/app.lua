@@ -18,7 +18,7 @@ function scrape()
   for line in io.lines("/proc/net/dev") do
     local t = {string.match(line, pattern)}
     if(t[1] ~= nil) then
-      if trim(t[1]) == enp1s0 then
+      if trim(t[1]) == eth0 then
         nds_table["in"] = t[2]
         nds_table["out"] = t[10]
         nds_table["total"] = t[2] + t[10]
