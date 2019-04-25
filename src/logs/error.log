@@ -6,3 +6,8 @@
 2019/03/21 16:19:15 [alert] 24421#24421: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
 2019/03/21 16:21:16 [alert] 24669#24669: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
 2019/03/21 16:23:25 [alert] 24821#24821: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/04/25 18:28:18 [alert] 25016#25016: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/04/25 18:29:50 [alert] 25248#25248: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/04/25 18:30:51 [alert] 25535#25535: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:16
+2019/04/25 18:34:31 [emerg] 25977#25977: invalid number of arguments in "env" directive in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:3
+2019/04/25 18:34:54 [alert] 26161#26161: lua_code_cache is off; this will hurt performance in /home/sergio/workspace/Ammbr/MeshWifi_Monitoring/Prometheus-Lua-Exporter/src/nginx.conf.compiled:17
